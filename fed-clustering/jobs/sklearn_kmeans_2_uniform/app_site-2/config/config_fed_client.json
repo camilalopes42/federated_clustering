@@ -1,0 +1,35 @@
+{
+  "format_version": 2,
+  "executors": [
+    {
+      "tasks": [
+        "train"
+      ],
+      "executor": {
+        "id": "Executor",
+        "path": "nvflare.app_opt.sklearn.sklearn_executor.SKLearnExecutor",
+        "args": {
+          "learner_id": "kmeans_learner"
+        }
+      }
+    }
+  ],
+  "task_result_filters": [],
+  "task_data_filters": [],
+  "components": [
+    {
+      "id": "kmeans_learner",
+      "path": "kmeans_learner.KMeansLearner",
+      "args": {
+        "data_path": "/tmp/nvflare/dataset/des.csv",
+        "train_start": 7104,
+        "train_end": 14208,
+        "valid_start": 0,
+        "valid_end": 14208,
+        "random_state": 0,
+        "client_id": 2,
+        "hash_experiment": "9244ede836ad88410ecd406fa08a11f5e335b0e5"
+      }
+    }
+  ]
+}
